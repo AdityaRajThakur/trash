@@ -5,6 +5,7 @@ public class Graph {
 
     private int vertex;
     boolean[] visited;
+    Queue<Integer> queue = new LinkedList<Integer>();
     int[][] adjmat;
     public Graph(int vertex){
         this.vertex = vertex; 
@@ -37,10 +38,26 @@ public class Graph {
             }
         }
     }
-    
+    public void bfs(int start){
+        if (visited[start]) return ;
+        visited[start] = true;
+        queue.add(start);
+        
+        while (!queue.isEmpty()) {
+            int u = queue.poll();
+            System.out.print(u+"->");
+            for (int i = 0; i < adjmat.length; i++) {
+                    if (visited[i]==false && adjmat[u][i]==1) {
+                        queue.add(i);
+                        visited[i] = true;
+                    }
+            }
+        }
+    }
     public static void main(String[] args) {
         Graph g = new Graph(5);
         g.Entergraph();
-        g.dfs(0);
+        g.bfs(0);
+
     }
 }
