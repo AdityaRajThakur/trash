@@ -6,11 +6,12 @@ public class Graph {
     private int vertex;
     boolean[] visited;
     Queue<Integer> queue = new LinkedList<Integer>();
+    int[] distance ;
     int[][] adjmat;
     public Graph(int vertex){
         this.vertex = vertex; 
         visited = new boolean[vertex];
-
+        distance = new int[vertex];
         adjmat = new int[vertex][vertex];
     }
 
@@ -54,10 +55,42 @@ public class Graph {
             }
         }
     }
+    // This contain the Shortest path algorithm in unweighted graph
+    public void shortestpath(int start){
+        if (visited[start]) return ;
+        visited[start] = true;
+        for (int i = 0; i < distance.length; i++) {
+            if (i!=start){
+                distance[i]= -1;
+            }
+        
+        }
+        distance[start] = 0;
+        queue.add(start);
+        
+        while (!queue.isEmpty()) {
+            int u = queue.poll();
+            
+            for (int i = 0; i < adjmat.length; i++) {
+                
+                    if (visited[i]==false && adjmat[u][i]==1) {
+                        distance[i] = distance[u] +1;
+                        queue.add(i);
+                        visited[i] = true;
+                    }
+            }
+        }
+    }
+    public void printDist(){
+        for (Integer  integer: distance) {
+            System.out.print(integer+" ");
+        }
+    }
     public static void main(String[] args) {
         Graph g = new Graph(5);
         g.Entergraph();
         g.bfs(0);
+        g.shortestpath(0);
 
     }
 }
