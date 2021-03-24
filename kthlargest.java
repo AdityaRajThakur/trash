@@ -8,12 +8,9 @@ public class kthlargest{
         array[i] = 1- array[i];
     }
     public static  int largest_element(int k , int[] array){
-        List<Integer> list = new ArrayList<>();
-        for (int integer : array) {
-            list.add(integer);
-        }
-        Collections.sort(list);
-        return list.get((list.size()-k));
+ 
+        Arrays.sort(array);
+        return array[array.length-k];
     }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -21,9 +18,16 @@ public class kthlargest{
         int n , q ;
         n = scan.nextInt();
         q = scan.nextInt();
+        int count = 0 ; 
         array = new int[n];
         for(int i = 0 ; i<array.length;i++){
-            array[i] = scan.nextInt();
+            int a = scan.nextInt();
+            array[i] = a;
+            if (a==1) {
+                count++;
+            }
+            
+            
         }
         for (int i = 0; i < q; i++) {
             int q_t , x_k;
