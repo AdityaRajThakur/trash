@@ -8,9 +8,14 @@ public class kthlargest{
         array[i] = 1- array[i];
     }
     public static  int largest_element(int k , int[] array){
- 
-        Arrays.sort(array);
-        return array[array.length-k];
+        List<Integer> list = new ArrayList<>();
+        for(int i = 0 ; i< array.length;i++){
+            list.add(array[i]);
+            
+        }
+        Collections.sort(list);
+        return list.get(list.size()-k);
+
     }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
