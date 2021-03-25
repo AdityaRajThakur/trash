@@ -70,13 +70,21 @@ public class Solution {
         }
         
         shortestpath(0,array,c_lib,c_roads);
-        printDist();
+        printDist(array,c_lib,c_roads);
     }
-    public static void printDist(){
+    public static void printDist(int [][] adjmat,int c_lib, int c_roads){
         int cost =  0 ; 
-        for (Integer  integer: distance) {
-            cost+=integer;
+        for (int i = 0; i < adjmat.length; i++) {
+            if (distance[i]==-1) {
+                shortestpath(i, adjmat, c_lib, c_roads);
+            }else{
+                cost+=distance[i];
+            }
+            
         }
+       /* for (int i : distance) {
+            if ( i !=-1) cost+=i;
+        }*/
         System.out.println(cost);
     }
 }
