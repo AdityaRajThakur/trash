@@ -82,9 +82,9 @@ public class Solution {
             }
             
         }
-       /* for (int i : distance) {
-            if ( i !=-1) cost+=i;
-        }*/
+       for (int i : distance) {
+            if ( i ==-1) cost+=i;
+        }
         System.out.println(cost);
     }
 }
