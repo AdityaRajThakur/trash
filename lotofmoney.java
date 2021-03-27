@@ -22,6 +22,7 @@ public class lotofmoney {
         for (int i = 0; i < denominate.length; i++) {
         
              
+            
             count+=bills(money-denominate[i]);
             
 
