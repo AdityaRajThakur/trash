@@ -15,13 +15,13 @@ public class lotofmoney {
     }
     public static int bills(int money){
         int count = 1; 
-        
+         
         if (money==1 || money == 0) return 1;
         if (money<0)  return 0;
         
         for (int i = 0; i < denominate.length; i++) {
         
-            
+             
             count+=bills(money-denominate[i]);
             
 
