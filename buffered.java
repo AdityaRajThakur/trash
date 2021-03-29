@@ -12,13 +12,14 @@ public class buffered {
        BufferedWriter bw = new BufferedWriter(new FileWriter("output.txt"));
         
         // String string = br.readLine();
-        // bw.write(string);
-        String string ;
-        while (br.ready()) {
-            string = br.readLine();
-            bw.write(string);
-            bw.newLine();
-        }
+        // bw.write(string); 
+        
+        // br.ready() is used to check that buffered is ready to read the line
+        // br.readLine() is used to the nextline in the file 
+
+        // write from here....
+         
+
         br.close();
         bw.close();
        
