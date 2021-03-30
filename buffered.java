@@ -18,7 +18,15 @@ public class buffered {
         // br.readLine() is used to the nextline in the file 
 
         // write from here....
-         
+        int t = Integer.parseInt(br.readLine());
+
+        while (t-->0) {
+            String str = br.readLine();
+   
+         bw.newLine();
+            bw.write(str);
+
+        }
 
         br.close();
         bw.close();
