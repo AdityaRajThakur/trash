@@ -1,60 +1,189 @@
-
-/**
- * secondmain
- */
+// Java program to illustrate the
+// fast input output
 import java.io.*;
-import java.util.*;
-import java.nio.charset.StandardCharsets;
-import java.math.*;
+import java.util.StringTokenizer;
 
-public class Main {
-    // this will return the gcd of a,b 
-public static long gcd(long a , long b ){
-    if (b==0) return a ;
-    return gcd(b,a%b)
-}
+public class Main{
+	public
 
-    // this will return the pow of a^b 
-public static long bin_exp(long a , long b){
-    long res = 1 ; 
-    while (b!=0) {
-        if(b%2!=0) res*=a;
-        a*=a;
-        b/=2;
-    }
-    return res;
-}
+		// Driver Code
+		static void main(String[] args) throws IOException
+	{
 
-    // this will return true if a is prime and false if not
-public static boolean primeornot(long a){
-    for (int i = 2; i*i<= a; i++) {
-        if (a%i==0) {
-            return false;
-        }
-    }
-    return true;
-}
-public static void main(String[] args) throws IOException{
-        // use this to read from the system.in or terminal 
-        // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("input.txt"),StandardCharsets.UTF_8));
-        BufferedWriter output = new BufferedWriter(new OutputStreamWriter(System.out));
-        int t ; 
-        t = Integer.parseInt(br.readLine());
-        while (t-->0) {
-            String[] str ; 
-            str = br.readLine().split(" ");
-            // wirte your code here 
+		// Initialize the reader
+		FastReader reader = new FastReader();
+
+		// Initialize the writer
+		FastWriter writer = new FastWriter();
+        
+
+
+		// Your Code here
 
 
 
-            
-            output.newLine();
-        }
-            br.close();
+	}
 
-        output.flush();
+	// Fast Reader Class
+	public static class FastReader {
+
+		// Reader object
+		BufferedReader reader;
+
+		// Constructor
+		public FastReader()
+		{
+
+			// Initialize the reader
+			reader = new BufferedReader(
+				new InputStreamReader(
+					System.in));
+
+			if (System.getProperty(
+					"ONLINE_JUDGE")
+				== null) {
+				try {
+					reader = new BufferedReader(
+						new InputStreamReader(
+							new FileInputStream(
+								"input.txt")));
+				}
+				catch (Exception e) {
+				}
+			}
+		}
+
+		// String tokenizer
+		StringTokenizer tokenizer;
+
+		// Function to read a
+		// single integer
+		public int readInt()
+			throws IOException
+		{
+			return Integer.parseInt(
+				reader.readLine());
+		}
+
+		// Function to read a
+		// single long
+		public long readLong()
+			throws IOException
+		{
+			return Long.parseLong(
+				reader.readLine());
+		}
+		// Function to read string
+		public String readString()
+			throws IOException
+		{
+			return reader.readLine();
+		}
+		// Function to read a array
+		// of numsInts integers
+		// in one line
+		public int[] readIntArray(int numInts)
+			throws IOException
+		{
+			int[] nums = new int[numInts];
+			tokenizer
+				= new StringTokenizer(
+					reader.readLine());
+
+			for (int i = 0;
+				i < numInts; i++) {
+				nums[i] = Integer.parseInt(
+					tokenizer.nextToken());
+			}
+			return nums;
+		}
 
 
-    }
+	}
+
+	// Fast Writer Class
+	public static class FastWriter {
+
+		// Writer object
+		BufferedWriter writer;
+
+		// Constructor
+		public FastWriter()
+		{
+
+			// Initialize the writer
+			writer = new BufferedWriter(
+				new OutputStreamWriter(
+					System.out));
+			if (System.getProperty(
+					"ONLINE_JUDGE")
+				== null) {
+				try {
+					writer = new BufferedWriter(
+						new OutputStreamWriter(
+							new FileOutputStream(
+								"output.txt")));
+				}
+				catch (Exception e) {
+				}
+			}
+		}
+
+		// Function to write the
+		// single integer
+		public void writeInt(int i)
+			throws IOException
+		{
+			writer.write(Integer.toString(i));
+			writer.newLine();
+			writer.flush();
+		}
+
+		// Function to write single long
+		public void writeLong(long i)
+			throws IOException
+		{
+			writer.write(Long.toString(i));
+			writer.newLine();
+			writer.flush();
+		}
+		// Function to write String
+		public void writeString(String s)
+			throws IOException
+		{
+			writer.write(s);
+			writer.newLine();
+			writer.flush();
+		}
+		// Function to write a Integer of
+		// array with spaces in one line
+		public void writeIntArrayWithSpaces(int[] nums)
+			throws IOException
+		{
+			for (int i = 0;
+				i < nums.length; i++) {
+				writer.write(nums[i]
+							+ " ");
+			}
+			writer.newLine();
+			writer.flush();
+		}
+
+		// Function to write Integer of
+		// array without spaces in 1 line
+		public void writeIntArrayWithoutSpaces(int[] nums)
+			throws IOException
+		{
+			for (int i = 0;
+				i < nums.length; i++) {
+				writer.write(
+					Integer.toString(
+						nums[i]));
+			}
+			writer.newLine();
+			writer.flush();
+		}
+
+
+	}
 }
