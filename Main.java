@@ -1,4 +1,3 @@
-// Java program to illustrate the
 // fast input output
 import java.io.*;
 import java.util.StringTokenizer;
@@ -12,15 +11,15 @@ public class Main{
 
 		// Initialize the reader
 		FastReader reader = new FastReader();
-
 		// Initialize the writer
 		FastWriter writer = new FastWriter();
-        
+/*********************************************************************************************************************************************/
+		// writer your code here
+		
 
 
-		// Your Code here
 
-
+/*********************************************************************************************************************************************/
 
 	}
 
@@ -58,6 +57,8 @@ public class Main{
 
 		// Function to read a
 		// single integer
+		// to extend the fast reader class writer your function here 
+
 		public int readInt()
 			throws IOException
 		{
@@ -131,6 +132,7 @@ public class Main{
 
 		// Function to write the
 		// single integer
+		// to extend the fast reader class writer your function here 
 		public void writeInt(int i)
 			throws IOException
 		{
@@ -157,7 +159,7 @@ public class Main{
 		}
 		// Function to write a Integer of
 		// array with spaces in one line
-		public void writeIntArrayWithSpaces(int[] nums)
+		public void writeIntArray(int[] nums)
 			throws IOException
 		{
 			for (int i = 0;
