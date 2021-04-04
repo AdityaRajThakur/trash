@@ -1,54 +1,110 @@
 // fast input output
 import java.io.*;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main{
 	public static void main(String[] args) throws IOException{
 		// Initialize the reader
-		FastReader reader = new FastReader();
+		FastScanner scan = new FastScanner();
 		// Initialize the writer
-		FastWriter writer = new FastWriter();
+		FastOutput out = new FastOutput();
 /*********************************************************************************************************************************************/
 		// writer your code here
-		int t = reader.readInt();
-	
-		while (t-->0) {
-			long num = reader.readLong();
-			writer.writeString(solve(num));
+
+		// String str = scan.readString();
+		// int integer = scan.readInt();
+		Long integer = scan.readLong();
+		// integer = solve(integer);
+		// out.writeString(Integer.toBinaryString(integer));
+		// if (solve(integer)) {
+		// 	out.writeString("Yes this integer is a power of two");
+		// }else{
+		// 	out.writeString("NO this number is not a power of two");
+		// }
+
+			
+		int i = solve(integer);
+		out.writeInt(i);
+
+			
 
 
 
+		/*********************************************************************************************************************************************/
+	}	
+		/*********************************************************************************************************************************************/
+		// writer your function code here Accepted
 
 
+// public static Boolean solve(int integer) {
+// 	while ((integer&1)==0) {
+// 		integer>>=1;
+// 	}
 
+// 	if (integer==1) {
+// 		return true;
+// 	}
+// 	return false; 
+// }
 
+// public static int solve(Long integer) {
+// 	int count=0;
+// 	while (integer>0) {
+// 		count++;
+// 		integer&=integer-1;
+// 	}
+// 	return count ;
+// }
+public static int solve(Long integer) {
+	int ans = 1; 
+	while (integer>0) {
+		if ((integer&1)==0) {
+			ans = ans *2;
 		}
-/*********************************************************************************************************************************************/
+		integer>>=1;
 	}
-/*********************************************************************************************************************************************/
-	// writer your function hereAccepted
+	return ans ;
+}
 
-	public static String solve(long num){
-		
-		while ((num&1)==0) {
-			num>>=1;
-		}
-		if (num==1) {
-			return "NO";
-		}
-		return "YES";
-		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 /**********************************************************************************************************************************************/
-
 	// Fast Reader Class
-	public static class FastReader {
+	public static class FastScanner {
 
 		// Reader object
 		BufferedReader reader;
 
 		// Constructor
-		public FastReader()
+		public FastScanner()
 		{
 
 			// Initialize the reader
@@ -77,33 +133,25 @@ public class Main{
 		// single integer
 		// to extend the fast reader class writer your function here 
 
-		public int readInt()
-			throws IOException
-		{
+		public int readInt()throws IOException{
 			return Integer.parseInt(
 				reader.readLine());
 		}
 
 		// Function to read a
 		// single long
-		public long readLong()
-			throws IOException
-		{
+		public long readLong()throws IOException{
 			return Long.parseLong(
 				reader.readLine());
 		}
 		// Function to read string
-		public String readString()
-			throws IOException
-		{
+		public String readString()throws IOException{
 			return reader.readLine();
 		}
 		// Function to read a array
 		// of numsInts integers
 		// in one line
-		public int[] readIntArray(int numInts)
-			throws IOException
-		{
+		public int[] readIntArray(int numInts)throws IOException{
 			int[] nums = new int[numInts];
 			tokenizer
 				= new StringTokenizer(
@@ -121,14 +169,13 @@ public class Main{
 	}
 
 	// Fast Writer Class
-	public static class FastWriter {
+	public static class FastOutput {
 
 		// Writer object
 		BufferedWriter writer;
 
 		// Constructor
-		public FastWriter()
-		{
+		public FastOutput(){
 
 			// Initialize the writer
 			writer = new BufferedWriter(
@@ -151,35 +198,28 @@ public class Main{
 		// Function to write the
 		// single integer
 		// to extend the fast reader class writer your function here 
-		public void writeInt(int i)
-			throws IOException
-		{
+		public void writeInt(int i)throws IOException{
 			writer.write(Integer.toString(i));
 			writer.newLine();
 			writer.flush();
 		}
 
 		// Function to write single long
-		public void writeLong(long i)
-			throws IOException
-		{
+		public void writeLong(long i)throws IOException{
 			writer.write(Long.toString(i));
 			writer.newLine();
 			writer.flush();
 		}
 		// Function to write String
-		public void writeString(String s)
-			throws IOException
-		{
+		public void writeString(String s)throws IOException{
 			writer.write(s);
 			writer.newLine();
 			writer.flush();
 		}
+		
 		// Function to write a Integer of
 		// array with spaces in one line
-		public void writeIntArray(int[] nums)
-			throws IOException
-		{
+		public void writeIntArray(int[] nums)throws IOException{
 			for (int i = 0;
 				i < nums.length; i++) {
 				writer.write(nums[i]
@@ -191,9 +231,7 @@ public class Main{
 
 		// Function to write Integer of
 		// array without spaces in 1 line
-		public void writeIntArrayWithoutSpaces(int[] nums)
-			throws IOException
-		{
+		public void writeIntArrayWithoutSpaces(int[] nums)throws IOException{
 			for (int i = 0;
 				i < nums.length; i++) {
 				writer.write(
@@ -205,5 +243,8 @@ public class Main{
 		}
 
 	}
-	}
+	
+
+
+}
 
