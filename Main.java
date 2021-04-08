@@ -11,6 +11,7 @@ public class Main{
 		FastOutput out = new FastOutput();
 /*********************************************************************************************************************************************/
 		// writer your code here
+		while (t-->0) {
 
 		// String str = scan.readString();
 		// int integer = scan.readInt();
