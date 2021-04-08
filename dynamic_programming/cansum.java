@@ -37,6 +37,9 @@ public class Main {
 		if (memorize.get(n)!=null) return memorize.get(n);
 		for (Integer integer : arr) {
 			int left = n - integer;
+			
+			
+			if (left==n) memorize.put(left,false);
 			memorize.put(left,cansum(left, arr,memorize));
 			if (memorize.get(left)== true){
 				return true;
