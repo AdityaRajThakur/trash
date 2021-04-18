@@ -16,7 +16,7 @@ public class Main{
 			long num = reader.readLong();
 			writer.writeString(solve(num));
 
-			writer.writer
+			
 
 
 
