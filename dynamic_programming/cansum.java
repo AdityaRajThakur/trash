@@ -48,6 +48,23 @@ public class Main {
 		memorize.put(n, false);
 		return false; 
 	}
+	// this equal sum partition function which use the element in the array only one time the function above use the array element as many times as possible this function is not 
+	// public static  List<Integer>  equal_sum_partition(int sum,int n ,List<Integer> arr){
+	// 	// if(sum==0) return true;
+	// 	if(sum==0) return new ArrayList<>();
+	// 	// if (sum<0 || n<=0) return false;
+	// 	if (sum<0 || n<=0) return null;
+	// 	if(arr.get(n-1)<=sum){
+	// 		// if(equal_sum_partition(sum-arr.get(n-1), n-1, arr)) return true;
+	// 		int left = sum - arr.get(n-1);
+	// 		List<Integer> combination = equal_sum_partition(left,n-1,arr);
+	// 		if(combination!=null){
+	// 			combination.add(arr.get(n-1));
+	// 			return combination;
+	// 		}
+	// 	}
+	// 	return equal_sum_partition(sum, n-1, arr);
+	// }
 
 
 
