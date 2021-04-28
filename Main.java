@@ -11,15 +11,15 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-
-
 public class Main {
 	public static void main(String[] args) throws IOException {
 		// Initialize the reader
 		FastScanner scan = new FastScanner();
 		// Initialize the writer
 		FastOutput out = new FastOutput();
-	/************************************************************************************************************************************/
+		// Initialize the Arraylist or List
+		List<Integer> list = new ArrayList<>();
+		/************************************************************************************************************************************/
 		// writer your code here
 
 
@@ -30,16 +30,13 @@ public class Main {
 
 
 
-	/*************************************************************************************************************************************/
+
+
+
+		/*************************************************************************************************************************************/
 	}
 	/**************************************************************************************************************************************/
 	// do not touch it
-
-
-
-
-
-
 
 	/**************************************************************************************************************************************/
 	// Write here the function which do you want to insert into the code during the
@@ -53,7 +50,7 @@ public class Main {
 	}
 
 	// this will return the pow of a^b
-	public static long bin(long a, long b) {
+	public static long binexp(long a, long b) {
 		long res = 1;
 		while (b != 0) {
 			if (b % 2 != 0)
@@ -64,7 +61,7 @@ public class Main {
 		return res;
 	}
 
-	public static long bin_mod(long a, long b, long mod) {
+	public static long binexpomod(long a, long b, long mod) {
 		long res = 1;
 		a %= mod;
 		while (b != 0) {
@@ -99,7 +96,7 @@ public class Main {
 	}
 
 	// this function count the number of digit in a number
-	public static int count_Digit(long a) {
+	public static int countdigit(long a) {
 		int count = 0;
 		while (a != 0) {
 			a = a / 10;
@@ -118,8 +115,18 @@ public class Main {
 		return false;
 	}
 
+	// this funciton will count the number of bit in a binary representation of a
+	// number
+	public static int countbit(Long n) {
+		int count = 0;
+		while (n > 0) {
+			count++;
+			n &= n - 1;
+		}
+		return count;
+	}
 	/*************************************************************************************************************************/
-	/****************************************************************************************************************************************/
+	/*************************************************************************************************************************/
 	// Fast Reader Class
 	public static class FastScanner {
 
@@ -168,7 +175,6 @@ public class Main {
 		public int[] readIntArray(int n) throws IOException {
 			int[] nums = new int[n];
 			tokenizer = new StringTokenizer(reader.readLine());
-
 			for (int i = 0; i < n; i++) {
 				nums[i] = Integer.parseInt(tokenizer.nextToken());
 			}
@@ -194,6 +200,7 @@ public class Main {
 			}
 			return list;
 		}
+
 		public List<Long> readLongAsList() throws IOException {
 			List<Long> list = new ArrayList<Long>();
 			tokenizer = new StringTokenizer(reader.readLine());
@@ -204,6 +211,7 @@ public class Main {
 		}
 
 	}
+
 	// Fast Writer Class
 	public static class FastOutput {
 
@@ -278,7 +286,7 @@ public class Main {
 			writer.flush();
 		}
 
-		public void writelist(List<Integer> num) throws IOException {
+		public void writeIntegerlist(List<Integer> num) throws IOException {
 			if (num != null) {
 				for (Integer integer : num) {
 					writer.write(integer + " ");
@@ -289,7 +297,7 @@ public class Main {
 			writer.flush();
 		}
 
-		public void write_matrix(int[][] matrix) throws IOException {
+		public void writeintmatrix(int[][] matrix) throws IOException {
 			for (int i = 0; i < matrix.length; i++) {
 				for (int j = 0; j < matrix[0].length; j++) {
 					writer.write(matrix[i][j] + " ");

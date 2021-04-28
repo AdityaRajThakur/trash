@@ -25,15 +25,7 @@ public class kanpsack01 {
 		int capacity = scan.readInt();
 		int[][] memo = new int[n+1][capacity+1];
 		// boolean[][] memo = new boolean[n + 1][capacity + 1];
-
-		
-		for (int i = 0; i <=n; i++) {
-			for (int j = 0; j <=capacity; j++) {
-				System.out.print(memo[i][j] + " ");
-			}
-			System.out.println();
-		}
-
+		out.writeInt(subset_sum(n, capacity, weight));
 		/*************************************************************************************************************************************/
 	}
 
@@ -57,21 +49,27 @@ public class kanpsack01 {
 		}
 		return String.valueOf(memo[n][capacity]);
 	}
-	public static boolean subset_sum(int n, int capacity, int[] weight) {
+	public static int subset_sum(int n, int capacity, int[] weight) {
+		//change return type to boolean
 		if (capacity == 0)
-			return true;
+			return 1; // true;
 		if (n <= 0)
-			return false;
-		if (weight[n - 1] <= capacity) {
-			if (subset_sum(n - 1, capacity - weight[n - 1], weight)) {
-				return true;
+			return 0; // false;
+		int total_count = 0;
+			if (weight[n - 1] <= capacity) {
+			// if (subset_sum(n - 1, capacity - weight[n - 1], weight)) {
+			// 	return true;
+			// }
+			int count = subset_sum(n-1, capacity-weight[n-1], weight);
+			if(count!=0){
+				total_count+=count;
 			}
 			// return subset_sum(n-1, capacity-weight[n-1], weight) || subset_sum(n-1,
 			// capacity, weight);
 		}
-		return subset_sum(n - 1, capacity, weight);
+		total_count+=subset_sum(n - 1, capacity, weight);
+		return total_count;
 	}
-
 	public static int kapsack_tabulation(int n, int capacity, int[] weight, int[] price, int[][] memo) {
 		for (int i = 0; i <= n; i++) {
 			for (int j = 0; j <= capacity; j++) {
@@ -86,7 +84,6 @@ public class kanpsack01 {
 		}
 		return memo[n][capacity];
 	}
-
 	public static int knapsack(int n, int capacity, int[] weight, int[] price, int[][] memo) {
 		if (capacity == 0 || n == 0)
 			return 0;

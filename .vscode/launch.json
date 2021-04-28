@@ -1,0 +1,189 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch kanpsack01",
+            "request": "launch",
+            "mainClass": "kanpsack01",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch kanpsack01",
+            "request": "launch",
+            "mainClass": "dynamic_programming.kanpsack01",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Array_column_row",
+            "request": "launch",
+            "mainClass": "Array_column_row",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch First",
+            "request": "launch",
+            "mainClass": "First",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch GCD",
+            "request": "launch",
+            "mainClass": "GCD",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph",
+            "request": "launch",
+            "mainClass": "Graph",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch binaryexpo",
+            "request": "launch",
+            "mainClass": "binaryexpo",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch buffered",
+            "request": "launch",
+            "mainClass": "buffered",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch count",
+            "request": "launch",
+            "mainClass": "count",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(1)",
+            "request": "launch",
+            "mainClass": "dynamic_programming.Main",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch fib",
+            "request": "launch",
+            "mainClass": "dynamic_programming.fib",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch grid_traveler",
+            "request": "launch",
+            "mainClass": "dynamic_programming.grid_traveler",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch epic",
+            "request": "launch",
+            "mainClass": "epic",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch gcd_sum",
+            "request": "launch",
+            "mainClass": "gcd_sum",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch kthlargest",
+            "request": "launch",
+            "mainClass": "kthlargest",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch lotofmoney",
+            "request": "launch",
+            "mainClass": "lotofmoney",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch napolean",
+            "request": "launch",
+            "mainClass": "napolean",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch newlargest",
+            "request": "launch",
+            "mainClass": "newlargest",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch news",
+            "request": "launch",
+            "mainClass": "news",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch prog",
+            "request": "launch",
+            "mainClass": "prog",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch string",
+            "request": "launch",
+            "mainClass": "string",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch tringalur",
+            "request": "launch",
+            "mainClass": "tringalur",
+            "projectName": "Project_4e20568d"
+        },
+        {
+            "type": "java",
+            "name": "Launch uppper_case",
+            "request": "launch",
+            "mainClass": "uppper_case",
+            "projectName": "Project_4e20568d"
+        }
+    ]
+}

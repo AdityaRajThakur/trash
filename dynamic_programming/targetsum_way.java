@@ -46,7 +46,7 @@ public class Main {
 			int left = n - integer;
 			if ( left == n ) continue; 
 			List<Integer> num = cansum(left,arr,memorize);
-			// memorize.put(left,num);
+			
 			if(num!=null){
 				num.add(integer);
 				to_be = num;
@@ -56,7 +56,7 @@ public class Main {
 				// memorize.put(left, combination);
 				// if (to_be==null || to_be.size()>combination.size()){
 				// 	to_be = num; 
-				// 	// memorize.put(integer, to_be);
+					// memorize.put(integer, to_be);
 				// }
 			}
 		}
